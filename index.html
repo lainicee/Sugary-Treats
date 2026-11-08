@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f5eee2">
+    <meta name="description" content="A colorful personal art gallery full of character sketches, portraits, finished illustrations, and little experiments from my sketchbook.">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Replace https://YOUR-SITE-URL-HERE with your public site base URL before sharing links. -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sugary Treats">
+    <meta property="og:title" content="Sugary Treats — a little corner of my sketchbook">
+    <meta property="og:description" content="A colorful personal art gallery: character sketches, portraits, experiments, and commissions.">
+    <meta property="og:url" content="https://YOUR-SITE-URL-HERE/">
+    <meta property="og:image" content="https://YOUR-SITE-URL-HERE/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Sugary Treats, a personal art gallery and sketchbook.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sugary Treats — a little corner of my sketchbook">
+    <meta name="twitter:description" content="A colorful personal art gallery: character sketches, portraits, experiments, and commissions.">
+    <meta name="twitter:image" content="https://YOUR-SITE-URL-HERE/social-preview.png">
+    <title>Sugary Treats</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>try{if(localStorage.getItem("art-theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
+</head>
+<body>
+    <a class="skip" href="#gallery">Skip to the gallery</a>
+    <div class="blobs" aria-hidden="true">
+        <i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="blob b4"></i>
+    </div>
+    <canvas id="trail" aria-hidden="true"></canvas>
+
+    <header class="hero">
+        <h1>Sugary <span>Treats</span></h1>
+        <svg class="squiggle" viewBox="0 0 300 20" aria-hidden="true"><path d="M3 12 Q 20 0 38 12 T 75 12 T 112 12 T 150 12 T 187 12 T 225 12 T 262 12 T 297 12" /></svg>
+        <p class="hand">Hello World</p>
+        <div class="hero-actions">
+            <a class="hero-cta" href="commissions.html">commission info <span aria-hidden="true">↗</span></a>
+            <button class="hero-auth-btn" id="likes-auth-trigger" type="button">sign in</button>
+        </div>
+    </header>
+
+    <div class="toolbar" role="search" aria-label="Search, filter and sort the gallery">
+        <nav id="filters" class="filters" aria-label="Filter by one or more mediums"></nav>
+        <label class="sort">sort
+            <select id="sort">
+                <option value="new">Newest first</option>
+                <option value="old">Oldest first</option>
+                <option value="az">A to Z</option>
+                <option value="listed">As listed</option>
+            </select>
+        </label>
+    </div>
+
+    <main id="gallery" aria-label="Art gallery" tabindex="-1"></main>
+
+    <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-labelledby="lb-title">
+        <button class="lb-close" aria-label="Close">&times;</button>
+        <button class="lb-nav lb-prev" data-dir="-1" aria-label="Previous artwork">&#8592;</button>
+        <button class="lb-nav lb-next" data-dir="1" aria-label="Next artwork">&#8594;</button>
+        <figure class="frame">
+            <div class="imgwrap" title="Click to zoom"><img id="lb-img" alt=""></div>
+            <figcaption>
+                <h2 id="lb-title">Artwork</h2>
+                <p class="lb-meta hand" id="lb-meta"></p>
+                <p class="lb-desc hand" id="lb-desc"></p>
+                <p class="lb-count hand" id="lb-count"></p>
+            </figcaption>
+        </figure>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="likes.js"></script>
+    <script src="artworks.js"></script>
+    <script src="profile.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

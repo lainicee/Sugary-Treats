@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f5eee2">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Replace https://YOUR-SITE-URL-HERE with your public site base URL before sharing links. -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sugary Treats">
+    <meta property="og:title" content="Art Commissions | Sugary Treats">
+    <meta property="og:description" content="Character sketches, portraits, colored illustrations, and personal art commissions from Sugary Treats.">
+    <meta property="og:url" content="https://YOUR-SITE-URL-HERE/commissions.html">
+    <meta property="og:image" content="https://YOUR-SITE-URL-HERE/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Sugary Treats, a personal art gallery and sketchbook.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Art Commissions | Sugary Treats">
+    <meta name="twitter:description" content="Character sketches, portraits, colored illustrations, and personal art commissions from Sugary Treats.">
+    <meta name="twitter:image" content="https://YOUR-SITE-URL-HERE/social-preview.png">
+    <meta name="description" content="Personal art commission information for Laincena Anastasia.">
+    <title>Commissions | Laincena Anastasia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="commissions.css">
+    <script>try{if(localStorage.getItem("art-theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
+</head>
+<body id="top" class="commission-page">
+    <a class="skip" href="#commission-content">Skip to commission information</a>
+    <div class="blobs" aria-hidden="true">
+        <i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="blob b4"></i>
+    </div>
+
+    <header class="hero comm-hero">
+        <a class="comm-back" href="index.html">← back to my sketchbook</a>
+        <p class="comm-eyebrow hand">hey, i'm laincena — and i take commissions sometimes</p>
+        <h1>Got a drawing in mind?</h1>
+        <svg class="squiggle" viewBox="0 0 300 20" aria-hidden="true"><path d="M3 12 Q 20 0 38 12 T 75 12 T 112 12 T 150 12 T 187 12 T 225 12 T 262 12 T 297 12" /></svg>
+        <p class="hand comm-hero-copy">Mostly character sketches, usually in pencil. Color happens too, if that's what you're after.</p>
+        <div class="comm-hero-actions">
+            <a class="comm-btn primary" href="#offerings">have a look ↓</a>
+            <a class="comm-btn secondary" href="#request">tell me about it ↗</a>
+        </div>
+    </header>
+
+    <main id="commission-content" class="comm-main">
+        <section class="comm-intro comm-paper" aria-labelledby="welcome-title">
+            <div class="comm-intro-copy">
+                <p class="comm-kicker">a quick note</p>
+                <h2 id="welcome-title">A little about my drawings</h2>
+                <p>I draw mostly characters, lots of pencil and monochrome, sometimes color (though been enjoying full color render lately). Original characters, fanart, portraits, tiny scenes, just send me whatever you've got in mind. It doesn't need to be perfectly figured out.</p>
+                <p class="comm-small-note">I don't have a fixed price list yet, so we'll talk through the idea, price and timing before I start.</p>
+            </div>
+            <aside class="comm-status-box" aria-live="polite">
+                <span class="status-spark" aria-hidden="true">✦</span>
+                <p class="status-label">right now</p>
+                <p id="commission-status" class="status-value">checking…</p>
+                <p id="commission-status-note" class="status-note">I'll update this when things change.</p>
+            </aside>
+        </section>
+
+        <section id="offerings" class="comm-section" aria-labelledby="offerings-title">
+            <div class="comm-section-head">
+                <div><p class="comm-kicker">things i like drawing</p><h2 id="offerings-title">Some places to start</h2></div>
+                <p>Not sure which one fits? That's fine, just ask.</p>
+            </div>
+            <div id="commission-types" class="comm-grid" aria-live="polite"></div>
+            <p class="comm-disclaimer">The pictures are examples, not a menu of exact replicas. Price depends on what we're making.</p>
+        </section>
+
+        <section class="comm-section" aria-labelledby="process-title">
+            <div class="comm-section-head">
+                <div><p class="comm-kicker">the practical bit</p><h2 id="process-title">What happens next</h2></div>
+            </div>
+            <ol id="commission-process" class="comm-process"></ol>
+        </section>
+
+        <section class="comm-two-col">
+            <section class="comm-paper comm-guidelines" aria-labelledby="guidelines-title">
+                <p class="comm-kicker">before you write</p>
+                <h2 id="guidelines-title">A couple of things</h2>
+                <ul id="commission-guidelines"></ul>
+            </section>
+            <section class="comm-paper comm-faq" aria-labelledby="faq-title">
+                <p class="comm-kicker">stuff you might be wondering</p>
+                <h2 id="faq-title">Questions</h2>
+                <div id="commission-faqs"></div>
+            </section>
+        </section>
+
+        <section id="request" class="comm-section comm-request-section" aria-labelledby="request-title">
+            <div class="comm-section-head">
+                <div><p class="comm-kicker">okay, your turn</p><h2 id="request-title">Send me the rough idea.</h2></div>
+                <p>Messy notes and links are welcome.</p>
+            </div>
+            <form id="commission-form" class="comm-form">
+                <div class="comm-field-grid">
+                    <label>Name / handle <span aria-hidden="true">*</span><input name="name" autocomplete="name" required maxlength="100" placeholder="Whatever you go by"></label>
+                    <label>Your email <span aria-hidden="true">*</span><input name="replyEmail" type="email" autocomplete="email" required maxlength="200" placeholder="you@example.com"></label>
+                    <label>What are you thinking? <span aria-hidden="true">*</span><select name="type" id="commission-type-select" required><option value="">Pick one (or start here)…</option></select></label>
+                    <label>Budget <small>(optional)</small><input name="budget" maxlength="120" placeholder="A range, or just say you're not sure"></label>
+                    <label>Deadline <small>(optional)</small><input name="deadline" maxlength="120" placeholder="No rush / a date if you have one"></label>
+                    <label>What will it be used for? <select name="usage"><option>Personal use</option><option>Gift</option><option>Commercial use — please discuss</option><option>Other / not sure yet</option></select></label>
+                    <label class="full-span">References <small>(optional)</small><input name="references" maxlength="800" placeholder="Links are great; attach anything else in your email"></label>
+                    <label class="full-span">Tell me a bit about it <span aria-hidden="true">*</span><textarea name="brief" required minlength="10" maxlength="5000" rows="6" placeholder="Who or what is in it? A pose, a mood, a color, a half-formed thought — anything helps."></textarea></label>
+                </div>
+                <div class="comm-submit-row">
+                    <button class="comm-btn primary" type="submit">open this in my email ↗</button>
+                    <p class="comm-form-note">This opens your email app with the form filled in. Nothing gets sent or saved by this page.</p>
+                </div>
+                <p id="commission-form-status" class="comm-form-status" role="status" aria-live="polite"></p>
+            </form>
+            <div class="comm-contact-fallback">
+                <span>Rather skip the form?</span>
+                <a id="commission-email-link" href="mailto:louisjassen@gmail.com">just email me</a>
+                <span aria-hidden="true">·</span>
+                <a href="index.html#about">more about the artist</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="comm-footer">
+        <svg class="squiggle" viewBox="0 0 300 20" aria-hidden="true"><path d="M3 12 Q 20 0 38 12 T 75 12 T 112 12 T 150 12 T 187 12 T 225 12 T 262 12 T 297 12" /></svg>
+        <p class="hand">Thanks for looking around. Hope your day's going alright.</p>
+        <div id="commission-socials" class="comm-socials"></div>
+        <a class="comm-back-to-top" href="#top" onclick="window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});return false;">back to the top ↑</a>
+    </footer>
+
+    <button class="theme-btn" id="commission-theme-btn" type="button" aria-label="Switch theme">lights off</button>
+    <script src="artworks.js"></script>
+    <script src="profile.js"></script>
+    <script src="commissions.js"></script>
+</body>
+</html>

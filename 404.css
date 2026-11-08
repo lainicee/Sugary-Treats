@@ -1,0 +1,37 @@
+/* Sugary Treats — playful not-found page */
+.not-found-page { min-height: 100vh; }
+.not-found-page .blobs { z-index: 0; }
+.not-found-main { position: relative; z-index: 2; min-height: 100vh; display: grid; place-items: center; padding: clamp(1rem, 4vw, 3rem); }
+.not-found-card {
+  position: relative; width: min(900px, 100%); padding: clamp(1.4rem, 5vw, 3.5rem);
+  background: var(--card); color: var(--ink); border: 4px solid var(--ink);
+  box-shadow: 10px 12px 0 var(--pink), 18px 20px 0 var(--deep);
+  transform: rotate(-.7deg); text-align: center;
+}
+.not-found-card::before {
+  content: ""; position: absolute; width: 110px; height: 30px; top: -17px; left: 20%; transform: rotate(-7deg);
+  background: var(--mint); opacity: .88;
+  clip-path: polygon(0 10%, 4% 0, 8% 12%, 12% 0, 100% 0, 96% 50%, 100% 100%, 8% 100%, 4% 88%, 0 100%, 3% 50%);
+}
+.not-found-sticker { display: inline-block; background: var(--yellow); border: 3px solid var(--ink); border-radius: 999px; padding: .25rem .9rem; box-shadow: 3px 4px 0 var(--deep); font: 400 clamp(.9rem, 2vw, 1.15rem) var(--display); transform: rotate(3deg); }
+.not-found-code { margin: .8rem 0 .1rem; font: 400 clamp(5rem, 18vw, 9rem)/.88 var(--display); letter-spacing: -.04em; color: var(--blue); text-shadow: 4px 4px 0 var(--yellow), 8px 8px 0 var(--pink); }
+.not-found-title { max-width: 700px; margin: 1.1rem auto .75rem; font: 400 clamp(2rem, 5vw, 3.6rem)/1.08 var(--display); }
+.not-found-copy { max-width: 620px; margin: 0 auto; font-size: clamp(1.3rem, 2.7vw, 1.8rem); line-height: 1.35; }
+.not-found-doodle { display: block; width: min(280px, 65vw); height: auto; margin: 1.2rem auto 1.4rem; overflow: visible; }
+.not-found-actions { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: .8rem; margin-top: 1.3rem; }
+.not-found-btn { display: inline-flex; justify-content: center; align-items: center; min-height: 46px; padding: .55rem 1.1rem; border: 3px solid var(--ink); border-radius: 999px; box-shadow: 4px 5px 0 var(--deep); color: var(--deep); font: 400 1rem var(--display); text-decoration: none; transition: transform .2s, box-shadow .2s; }
+.not-found-btn.primary { background: var(--yellow); transform: rotate(-1deg); }
+.not-found-btn.secondary { background: var(--mint); transform: rotate(1deg); }
+.not-found-btn:hover { transform: translateY(-3px) rotate(0); box-shadow: 4px 8px 0 var(--deep); }
+.not-found-btn:focus-visible { outline: 3px dashed var(--ink); outline-offset: 4px; }
+.not-found-footnote { margin-top: 1.5rem; opacity: .75; font-size: 1.2rem; }
+.not-found-footnote a { color: inherit; text-underline-offset: .2em; }
+@media (max-width: 520px) {
+  .not-found-main { padding: 1.15rem; }
+  .not-found-card { box-shadow: 6px 8px 0 var(--pink), 11px 13px 0 var(--deep); border-width: 3px; }
+  .not-found-code { margin-top: 1rem; }
+  .not-found-btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .not-found-btn { transition: none; }
+}
