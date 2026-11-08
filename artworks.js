@@ -252,7 +252,7 @@ const artworks = [
       "#ff5fa2",
       "#2f5bff"
     ],
-    "thumb": "thumbs/Artwork-%2820%29.jpg.webp"
+    "thumb": "thumbs/artwork-%2820%29.jpg.webp"
   },
   {
     "title": "Kaoruko Waguri",
