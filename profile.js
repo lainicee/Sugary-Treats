@@ -29,7 +29,7 @@ const PROFILE = {
     ],
 
     links: [
-        { label: "Instagram", handle: "@jes_illustraw", url: "https://www.instagram.com/jes_illustraw/" },
+        { label: "Instagram", handle: "@aphroditethelove", url: "https://www.instagram.com/aphroditethelove/" },
         { label: "Twitter / X", handle: "@Astecinial", url: "https://x.com/Astecinial" },
         { label: "TikTok",     handle: "@lainicenast",  url: "https://www.tiktok.com/@lainicenast" }
     ],
