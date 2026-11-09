@@ -1,9 +1,0 @@
-CHANGES
-=======
-- Replaced browser-local favorites with authenticated, account-backed likes.
-- Added public aggregate like counters and per-user likes via Supabase Postgres.
-- Added passwordless email magic-link sign-in dialog and account sign-out.
-- Added live updates via Supabase Realtime on aggregate counts.
-- Added My Likes filter (likes sync across devices for the signed-in account).
-- Kept the existing gallery layout, lightbox, artwork routing, theme and commission link.
-- Preserved the favicon, social preview and 404 assets in this package.
