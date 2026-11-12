@@ -1,6 +1,6 @@
 
 const PROFILE = {
-    name: "Hello World",
+    name: "Lainicena Anastasia",
     tagline: "hybrid",
     location: "Palembang, Indonesia",                    // optional, e.g. "Palembang, Indonesia"
     status: "open",                  // commissions: "open", "closed", or "" to hide the sticker
